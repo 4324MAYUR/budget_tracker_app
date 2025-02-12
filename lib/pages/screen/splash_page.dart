@@ -8,14 +8,16 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      Timer(
-        const Duration(seconds: 3),
-            () {
-          Get.offNamed(GetPages.home);
-        },
-      );
-    });
+    WidgetsBinding.instance.addPostFrameCallback(
+      (_) {
+        Timer(
+          const Duration(seconds: 3),
+          () {
+            Get.offNamed(GetPages.home);
+          },
+        );
+      },
+    );
 
     return Scaffold(
       backgroundColor: Colors.green,
